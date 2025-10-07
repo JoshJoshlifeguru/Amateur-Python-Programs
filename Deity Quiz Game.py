@@ -1,6 +1,6 @@
 import random
 import time
-import torch
+
 
 # List of deities and non-deities
 dud_dieties = ["Zeus","Hera","Poseidon","Demeter","Athena", "Apollo","Artemis","Ares","Aphrodite","Hephaestus", "Hermes","Hestia","Allah","Buddha","Vishnu", "Shiva","Odin","Thor","Loki","Ra"]
@@ -170,3 +170,4 @@ def ok_diety():
 
     
 ok_diety()
+
