@@ -70,7 +70,7 @@ def ok_diety():
 
             
             def shrimp():
-                pop = input("Correct, all of those gay chumps are fake my nigga🥳 Do you want to play again? (yes/no): ")
+                pop = input("Correct, all of those suckas are fake🥳 Do you want to play again? (yes/no): ")
                 if pop.lower() == "yes":
                     print("Great! Less Go:")
                     return
@@ -170,4 +170,5 @@ def ok_diety():
 
     
 ok_diety()
+
 
