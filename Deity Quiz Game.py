@@ -1,20 +1,6 @@
 import random
 import time
 import torch
-from TTS.api import TTS  # From coqui-tts
-
-# Device: GPU for speed, fallback to CPU
-device = "cuda" if torch.cuda.is_available() else "cpu"
-
-# Load a pretrained English model
-tts = TTS("tts_models/en/ljspeech/tacotron2-DDC").to(device)
-
-# Synthesize and save
-tts.tts_to_file(
-    text="This neural TTS sounds incredibly natural—try it yourself!",
-    file_path="hello_world.wav"
-)
-print("Generated: hello_world.wav")
 
 # List of deities and non-deities
 dud_dieties = ["Zeus","Hera","Poseidon","Demeter","Athena", "Apollo","Artemis","Ares","Aphrodite","Hephaestus", "Hermes","Hestia","Allah","Buddha","Vishnu", "Shiva","Odin","Thor","Loki","Ra"]
@@ -184,77 +170,3 @@ def ok_diety():
 
     
 ok_diety()
-
-
-old_version = (
-    """import random
-dieties = [
-    "Zeus",
-    "Hera",
-    "Poseidon",
-    "Demeter",
-    "Athena",
-    "Apollo",
-    "Artemis",
-    "Ares",
-    "Aphrodite",
-    "Hephaestus",
-    "Hermes",
-    "Hestia",
-    "Jesus",
-    "Jesus Christ",
-    "God",
-    "Yahweh",
-    "Allah"
-]
-def ok_diety():
-    while True:
-        try:
-            def bye():
-                cool = input("Correct. Want to continue? (yes/no): ")
-                if cool.lower() == "yes":
-                    print("Great! Let's continue.")
-                elif cool.lower() == "no":
-                    print("Ok. Thanks for playing.")
-                    exit()
-                else:
-                    print("Invalid input. Try 'yes' or 'no'.")
-                    bye()
-                return bye()
-            
-            question = input("What is a good diety?: ")
-            if question == "Jesus":
-                bye()
-            if question == "Jesus Christ":
-                bye()
-            if question == "God":
-                bye()
-            if question == "Yahweh":
-                bye()
-            else:
-                print("Incorrect. Try again.")
-                ok_diety()
-        except ValueError:
-                print("Invalid input. Please enter a valid diety name.")
-
-        return ok_diety()
-    
-run = (ok_diety())
-""")
-"""def super_groan():
-                groan = input("That's not even an option, man. Try 'yes' or 'no': ")                
-                if "yes" in groan:
-                    print("Alright, let's try again:")
-                    ok_diety()
-                elif groan.lower() == "no":
-                    print("Ok. Thanks for playing (quitter...)")
-                    time.sleep(3)
-                    exit()
-                elif groan.lower() == "24633642":
-                    print("K I L L C O D E  A C T I V A T E D : pr0gR@M  $HuTTtInG do0Wn . . ... . .....☠️")
-                    time.sleep(3)
-                    exit()
-                else:
-                    if "yes" not in groan:
-                        super_groan()
-                return super_groan()"""
