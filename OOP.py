@@ -1,18 +1,19 @@
 import time
 class Robots:
 
+    # define the qualities and traits "a mold" for how you object is to be constructed
     def __init__ (self, name, type, build_year, purpose, status):
         self.name = name
         self.type = type
         self.build_year = build_year
         self.purpose = purpose
         self.status = status
-        
 
+    # define a function your finished object can do
     def introduce_self(self):
         print(f"Hello, I am {self.name}. I was built in {self.build_year}. My purpose is {self.purpose}. My current status is {self.status}.")
 
-
+# with this function, we can allow the user to build their own object in realtime
 def build_robot():
     try:
         Name = input("Enter a name for your robot: ")
@@ -40,4 +41,5 @@ def build_robot():
     greet()
     
 build_robot()
+
     
