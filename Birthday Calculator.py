@@ -1,7 +1,7 @@
 """
-
-
-
+a birthday program for guessing how many people
+have the same birthday, and for
+calculating the odds of a match
 """
 
 import datetime, random
@@ -112,3 +112,4 @@ print('That\'s probably more than you would think!')
       
       
       
+
